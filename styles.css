@@ -117,8 +117,6 @@ a {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: flex-end;
 }
 
 .nav-menu a {
@@ -499,93 +497,22 @@ a {
   .hero-card {
     min-height: 380px;
   }
-
-  .about {
-    padding: 1.75rem;
-  }
-
-  .book-card {
-    padding: 2rem;
-  }
 }
 
 @media (max-width: 680px) {
   .nav-menu {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: center;
-    text-align: center;
-    gap: 0.75rem;
-    padding-top: 0.75rem;
-  }
-
-  .nav-menu a {
-    padding: 0.5rem 0.75rem;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 999px;
+    display: none;
   }
 
   .hero-card {
     min-height: 280px;
-    width: 100%;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero-buttons .button {
-    width: 100%;
-  }
-
-  .hero-copy h2,
-  .section h2 {
-    font-size: clamp(2rem, 5vw, 2.8rem);
-  }
-
-  .hero-text,
-  .hero-subtext,
-  .about-copy p,
-  .book-card p,
-  .contact-grid p {
-    font-size: 0.98rem;
-  }
-
-  .about-image img {
-    min-height: 260px;
-  }
-
-  .book-card {
-    grid-template-columns: 1fr;
-    padding: 1.8rem;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .brand {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .brand h1 {
-    font-size: 2rem;
-  }
-
-  .hero-badges {
-    justify-content: flex-start;
   }
 
   .glimpse-grid {
     grid-template-columns: 1fr;
+  }
+
+  .brand h1 {
+    font-size: 2rem;
   }
 }
