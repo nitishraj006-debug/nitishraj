@@ -1,14 +1,16 @@
 :root {
-  --bg: #f9e1d2;
-  --surface: #fff2ea;
-  --surface-alt: #ffe7d7;
-  --surface-strong: rgba(255, 255, 255, 0.9);
-  --text: #44271b;
-  --muted: #6e4734;
-  --accent: #d5763b;
-  --accent-dark: #b34812;
-  --highlight: #f5b57c;
-  --shadow: 0 28px 80px rgba(0, 0, 0, 0.14);
+  --bg: #fde5de;
+  --surface: #fff7f2;
+  --surface-alt: #ffe7e0;
+  --surface-strong: rgba(255, 255, 255, 0.94);
+  --text: #3f2a20;
+  --muted: #77513e;
+  --accent: #df7d56;
+  --accent-dark: #b74f27;
+  --highlight: #f6c2a7;
+  --rose: #f2c7c1;
+  --lavender: #f7e2f2;
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.12);
 }
 
 * {
@@ -18,8 +20,9 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: radial-gradient(circle at top right, rgba(255, 229, 216, 0.85), transparent 30%),
-    linear-gradient(180deg, #ffe5d3 0%, #fcd2b4 40%, #fac499 100%);
+  background: radial-gradient(circle at top right, rgba(255, 246, 238, 0.9), transparent 28%),
+    radial-gradient(circle at left center, rgba(244, 195, 183, 0.28), transparent 22%),
+    linear-gradient(180deg, #fff5f0 0%, #ffe5dd 42%, #f8d2c5 100%);
   color: var(--text);
 }
 
@@ -161,13 +164,21 @@ a {
 }
 
 .hero-badges span {
-  background: rgba(213, 119, 59, 0.12);
-  color: var(--muted);
+  background: rgba(223, 125, 86, 0.14);
+  color: var(--accent-dark);
   padding: 0.8rem 1rem;
   border-radius: 999px;
   font-size: 0.94rem;
   font-weight: 700;
   letter-spacing: 0.05em;
+}
+
+.hero-subtext {
+  margin-top: 1.4rem;
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 32rem;
+  line-height: 1.8;
 }
 
 .hero-copy h2,
@@ -179,6 +190,7 @@ a {
   font-weight: 800;
   letter-spacing: 0.03em;
   color: #3f2012;
+  text-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
 }
 
 .hero-text,
@@ -219,15 +231,15 @@ a {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, #ffb984, #d96c32);
+  background: linear-gradient(135deg, #ffa9b8, #d86c72);
   color: #fff;
-  box-shadow: 0 18px 40px rgba(217, 108, 50, 0.22);
+  box-shadow: 0 18px 40px rgba(216, 108, 114, 0.22);
 }
 
 .button-outline {
-  border: 1px solid rgba(217, 108, 50, 0.35);
+  border: 1px solid rgba(223, 125, 86, 0.35);
   color: #44271b;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .hero-image {
@@ -249,8 +261,8 @@ a {
 .hero-card {
   width: min(100%, 520px);
   min-height: 520px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 240, 230, 0.85));
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 241, 236, 0.92));
+  border: 1px solid rgba(255, 203, 187, 0.5);
   border-radius: 3rem;
   box-shadow: var(--shadow);
   display: grid;
@@ -318,7 +330,7 @@ a {
 }
 
 .about {
-  background: rgba(255, 255, 255, 0.6);
+  background: linear-gradient(180deg, rgba(255, 245, 242, 0.95), rgba(255, 227, 217, 0.9));
   border-radius: 2.5rem;
   padding: 2rem;
   box-shadow: var(--shadow);
@@ -371,8 +383,8 @@ a {
 .glimpse-card {
   display: grid;
   grid-template-rows: 1fr auto;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 239, 231, 0.95));
-  border: 1px solid rgba(213, 119, 59, 0.14);
+  background: linear-gradient(180deg, rgba(255, 245, 244, 0.96), rgba(255, 228, 218, 0.96));
+  border: 1px solid rgba(223, 125, 86, 0.16);
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -385,9 +397,9 @@ a {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: rgba(255, 196, 160, 0.25);
-  top: -30px;
-  right: -30px;
+  background: rgba(255, 188, 191, 0.25);
+  top: -28px;
+  right: -28px;
 }
 
 .glimpse-card img {
@@ -395,6 +407,13 @@ a {
   min-height: 280px;
   object-fit: cover;
   object-position: center center;
+}
+
+.glimpse-card p {
+  margin: 0;
+  padding: 1.25rem;
+  color: var(--muted);
+  font-weight: 600;
 }
 
 .glimpse-card p {
@@ -412,10 +431,10 @@ a {
 
 .book-card {
   grid-template-columns: 1.8fr 1fr;
-  background: linear-gradient(135deg, rgba(255, 235, 225, 0.95), rgba(255, 214, 184, 0.95));
-  border: 1px solid rgba(213, 119, 59, 0.15);
-  border-radius: 2.4rem;
-  padding: 2.2rem;
+  background: linear-gradient(135deg, rgba(255, 239, 237, 0.98), rgba(255, 220, 209, 0.95));
+  border: 1px solid rgba(223, 125, 86, 0.18);
+  border-radius: 2.6rem;
+  padding: 2.4rem;
   box-shadow: var(--shadow);
 }
 
@@ -442,8 +461,8 @@ a {
   justify-content: center;
   padding: 1rem 1.4rem;
   border-radius: 999px;
-  background: rgba(226, 168, 255, 0.1);
-  border: 1px solid rgba(226, 168, 255, 0.2);
+  background: rgba(255, 220, 217, 0.95);
+  border: 1px solid rgba(223, 125, 86, 0.25);
   color: var(--text);
   font-weight: 700;
 }
